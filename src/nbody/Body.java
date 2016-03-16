@@ -1,6 +1,7 @@
 package nbody;
 
 import edu.princeton.cs.StdDraw;
+import java.awt.Color;
 
 /******************************************************************************
  *  Compilation:  javac Body.java
@@ -39,7 +40,7 @@ public class Body {
     } // forceFrom( Body )
 
     public void draw() {
-        StdDraw.setPenRadius(0.025);
+        StdDraw.setPenRadius(0.125); //changes size
         StdDraw.point(r.cartesian(0), r.cartesian(1));
     } // draw()
 
