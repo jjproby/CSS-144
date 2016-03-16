@@ -49,11 +49,12 @@ public class Universe {
             double vx = inputStream.readDouble();
             double vy = inputStream.readDouble();
             double mass = inputStream.readDouble();
+            double size = inputStream.readDouble();
             double[] position = {rx, ry};
             double[] velocity = {vx, vy};
             Vector r = new Vector(position);
             Vector v = new Vector(velocity);
-            orbs[i] = new Body(r, v, mass);
+            orbs[i] = new Body(r, v, mass, size);
         } // for
     } // Universe()
 
