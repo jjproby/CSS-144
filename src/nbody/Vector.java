@@ -104,7 +104,7 @@ public class Vector {
             c.data[i] = this.data[i] + that.data[i];
         return c;
     } // plus( Vector )
-     //random comment to see if git works
+     //GIT WORKS... YAY!!!
 
     // return this - that
     public Vector minus(Vector that) {
