@@ -17,11 +17,13 @@ public class Body {
     private Vector r;      // position
     private Vector v;      // velocity
     private final double mass;   // mass
+    public Color color; //try to choose color
 
     public Body(Vector r, Vector v, double mass) {
         this.r = r;
         this.v = v;
         this.mass = mass;
+        
     } // Body( Vector, Vector, double )
 
     public void move(Vector f, double dt) {
