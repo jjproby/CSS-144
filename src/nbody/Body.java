@@ -1,6 +1,7 @@
 package nbody;
 
 import edu.princeton.cs.StdDraw;
+import static edu.princeton.cs.StdDraw.BLUE;
 import java.awt.Color;
 
 /******************************************************************************
@@ -18,11 +19,13 @@ public class Body {
     private Vector v;      // velocity
     private final double mass;   // mass
     public Color color; //try to choose color
+    private final double size;
 
-    public Body(Vector r, Vector v, double mass) {
+    public Body(Vector r, Vector v, double mass, double size) {
         this.r = r;
         this.v = v;
         this.mass = mass;
+        this.size = size*0.05;
         
     } // Body( Vector, Vector, double )
 
@@ -42,8 +45,9 @@ public class Body {
     } // forceFrom( Body )
 
     public void draw() {
-        StdDraw.setPenRadius(0.125); //changes size
+        StdDraw.setPenRadius(size); //changes size
         StdDraw.point(r.cartesian(0), r.cartesian(1));
+        StdDraw.setPenColor(BLUE);
     } // draw()
 
     // this method is only needed if you want to change the size of the bodies
