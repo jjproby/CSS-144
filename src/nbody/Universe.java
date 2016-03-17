@@ -52,8 +52,8 @@ public class Universe {
             double mass = inputStream.readDouble();
             double size = inputStream.readDouble();
             int red = inputStream.readInt();
-            int blue = inputStream.readInt();
             int green = inputStream.readInt();
+            int blue = inputStream.readInt();
             Color color = new Color(red, green, blue);
             double[] position = {rx, ry};
             double[] velocity = {vx, vy};
