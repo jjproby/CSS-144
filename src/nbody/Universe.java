@@ -2,6 +2,7 @@ package nbody;
 
 import edu.princeton.cs.In;
 import edu.princeton.cs.StdDraw;
+import java.awt.Color;
 
 /**
  * ****************************************************************************
@@ -50,11 +51,15 @@ public class Universe {
             double vy = inputStream.readDouble();
             double mass = inputStream.readDouble();
             double size = inputStream.readDouble();
+            int red = inputStream.readInt();
+            int blue = inputStream.readInt();
+            int green = inputStream.readInt();
+            Color color = new Color(red, green, blue);
             double[] position = {rx, ry};
             double[] velocity = {vx, vy};
             Vector r = new Vector(position);
             Vector v = new Vector(velocity);
-            orbs[i] = new Body(r, v, mass, size);
+            orbs[i] = new Body(r, v, mass, size, color);
         } // for
     } // Universe()
 
