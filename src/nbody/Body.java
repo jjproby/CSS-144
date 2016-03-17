@@ -70,8 +70,6 @@ public class Body {
         StdDraw.point(r.cartesian(0), r.cartesian(1));
         StdDraw.setPenColor(color);
     } // draw()
-
-    // safdafdsafs trying to get git working
     // this method is only needed if you want to change the size of the bodies
 
     /**
