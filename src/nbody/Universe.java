@@ -28,6 +28,11 @@ public class Universe {
     private final Body[] orbs;       // array of N bodies
 
     // read universe from file
+
+    /** Where you can get the inputs of the bodies
+     *
+     * @param fileName
+     */
     public Universe(String fileName) {
 
         // the authors' version reads from standard input
@@ -64,6 +69,11 @@ public class Universe {
     } // Universe()
 
     // increment time by dt units, assume forces are constant in given interval
+
+    /**
+     *
+     * @param dt
+     */
     public void increaseTime(double dt) {
 
         // initialize the forces to zero
@@ -88,6 +98,10 @@ public class Universe {
     } // increaseTime( double )
 
     // draw the N bodies
+
+    /**
+     *
+     */
     public void draw() {
         for (int i = 0; i < N; i++) {
             orbs[i].draw();
@@ -95,6 +109,11 @@ public class Universe {
     } // draw()
 
     // client to simulate a universe
+
+    /** makes the universe change color. Made it black
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Universe newton = new Universe( args[1] );
         double dt = Double.parseDouble(args[0]);
