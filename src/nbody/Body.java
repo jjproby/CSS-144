@@ -20,6 +20,14 @@ public class Body {
     private final Color color; //try to choose color
     private final double size;
 
+    /**
+     *
+     * @param r
+     * @param v
+     * @param mass
+     * @param size  changes the size of the dots in input file
+     * @param color this changes the colors in RGB format
+     */
     public Body(Vector r, Vector v, double mass, double size, Color color) {
         this.r = r;
         this.v = v;
@@ -29,12 +37,22 @@ public class Body {
         
     } // Body( Vector, Vector, double )
 
+    /**
+     *
+     * @param f
+     * @param dt
+     */
     public void move(Vector f, double dt) {
         Vector a = f.times(1/mass);
         v = v.plus(a.times(dt));
         r = r.plus(v.times(dt));
     } // move( Vector, double )
 
+    /**
+     *
+     * @param b
+     * @return
+     */
     public Vector forceFrom(Body b) {
         Body a = this;
         double G = 6.67e-11;
@@ -44,6 +62,9 @@ public class Body {
         return delta.direction().times(F);
     } // forceFrom( Body )
 
+    /** makes the dots appear with the desired size and color
+     *
+     */
     public void draw() {
         StdDraw.setPenRadius(size); //changes size
         StdDraw.point(r.cartesian(0), r.cartesian(1));
@@ -51,6 +72,11 @@ public class Body {
     } // draw()
 
     // this method is only needed if you want to change the size of the bodies
+
+    /**
+     *
+     * @param penRadius
+     */
     public void draw(double penRadius) {
         StdDraw.setPenRadius(penRadius);
         StdDraw.point(r.cartesian(0), r.cartesian(1));
