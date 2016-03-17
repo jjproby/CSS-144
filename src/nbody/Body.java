@@ -22,9 +22,9 @@ public class Body {
 
     /**
      *
-     * @param r
-     * @param v
-     * @param mass
+     * @param r position
+     * @param v velocity
+     * @param mass mass of bodies
      * @param size  changes the size of the dots in input file
      * @param color this changes the colors in RGB format
      */
@@ -37,22 +37,14 @@ public class Body {
         
     } // Body( Vector, Vector, double )
 
-    /**
-     *
-     * @param f
-     * @param dt
-     */
+
     public void move(Vector f, double dt) {
         Vector a = f.times(1/mass);
         v = v.plus(a.times(dt));
         r = r.plus(v.times(dt));
     } // move( Vector, double )
 
-    /**
-     *
-     * @param b
-     * @return
-     */
+
     public Vector forceFrom(Body b) {
         Body a = this;
         double G = 6.67e-11;
@@ -73,10 +65,6 @@ public class Body {
     // GIT IS WORKING
     // this method is only needed if you want to change the size of the bodies
 
-    /**
-     *
-     * @param penRadius
-     */
     public void draw(double penRadius) {
         StdDraw.setPenRadius(penRadius);
         StdDraw.point(r.cartesian(0), r.cartesian(1));
