@@ -44,6 +44,7 @@ public class Universe {
 
         // the set scale for drawing on screen
         radius = inputStream.readDouble();
+        StdDraw.setCanvasSize(2000, 1900);
         StdDraw.setXscale(-radius, +radius);
         StdDraw.setYscale(-radius, +radius);
 
