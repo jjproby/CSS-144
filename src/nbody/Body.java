@@ -59,8 +59,8 @@ public class Body {
      */
     public void draw() {
         StdDraw.setPenRadius(size); //changes size
-        StdDraw.point(r.cartesian(0), r.cartesian(1));
         StdDraw.setPenColor(color);
+        StdDraw.point(r.cartesian(0), r.cartesian(1));
     } // draw()
     // GIT IS WORKING
     // this method is only needed if you want to change the size of the bodies
