@@ -3,6 +3,7 @@ package nbody;
 import edu.princeton.cs.In;
 import edu.princeton.cs.StdDraw;
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  * ****************************************************************************
@@ -51,11 +52,13 @@ public class Universe {
         // read in the N bodies
         orbs = new Body[N];
         for (int i = 0; i < N; i++) {
+            ArrayList<Double> MassList = new ArrayList<Double>();
             double rx = inputStream.readDouble();
             double ry = inputStream.readDouble();
             double vx = inputStream.readDouble();
             double vy = inputStream.readDouble();
             double mass = inputStream.readDouble();
+            MassList.add(mass);
             double size = inputStream.readDouble();
             int red = inputStream.readInt();
             int green = inputStream.readInt();
@@ -68,7 +71,7 @@ public class Universe {
             orbs[i] = new Body(r, v, mass, size, color);
         } // for
     } // Universe()
-
+    
     // increment time by dt units, assume forces are constant in given interval
 
     /**
@@ -124,5 +127,8 @@ public class Universe {
             newton.draw();
             StdDraw.show(10);
         } // while
+        for (int i = 0; i < MassList.length(); i++ ) {
+            StdDraw.textLeft(-newton.radius, -newton.radius + ((i*10)*Math.pow(10, 10)), "Planet #" + i + " Mass:" MassList[i]);
+        }
     } // main( String [] )
 } // Universe
