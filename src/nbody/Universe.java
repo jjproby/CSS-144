@@ -3,6 +3,7 @@ package nbody;
 import edu.princeton.cs.In;
 import edu.princeton.cs.StdDraw;
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  * ****************************************************************************
@@ -26,7 +27,8 @@ public class Universe {
     private final double radius;     // radius of universe
     private final int N;             // number of bodies
     private final Body[] orbs;       // array of N bodies
-
+    private static ArrayList masses;
+    
     // read universe from file
 
     /** Where you can get the inputs of the bodies
