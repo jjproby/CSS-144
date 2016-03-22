@@ -50,7 +50,7 @@ public class Body {
     public void update(Vector r) {
         double[] position = {r.cartesian(0), r.cartesian(1)};
         tail.add(0, position);
-        if (tail.size() > 50 ) {
+        if (tail.size() > 45) {
             tail.remove(tail.size() - 1);
         }
     }
@@ -72,10 +72,12 @@ public class Body {
         StdDraw.setPenRadius(size); //changes size
         StdDraw.setPenColor(color); //changes the color
         StdDraw.point(r.cartesian(0), r.cartesian(1));
+        double tailSize = 0.9;
         for (int i = 0; i < tail.size() - 1; i++) {
             double[] first = tail.get(i);
             double[] second = tail.get(i + 1);
-            StdDraw.setPenRadius(size*0.5);
+            StdDraw.setPenRadius(size * tailSize);
+            tailSize = tailSize - 0.02;
             StdDraw.line(first[0], first[1], second[0], second[1]);
         }
     } // draw()
