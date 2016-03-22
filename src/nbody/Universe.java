@@ -28,10 +28,10 @@ public class Universe {
     private final int N;             // number of bodies
     private final Body[] orbs;       // array of N bodies
     private static ArrayList masses;
-    
-    // read universe from file
 
-    /** Where you can get the inputs of the bodies
+    // read universe from file
+    /**
+     * Where you can get the inputs of the bodies
      *
      * @param fileName
      */
@@ -72,7 +72,6 @@ public class Universe {
     } // Universe()
 
     // increment time by dt units, assume forces are constant in given interval
-
     /**
      *
      * @param dt
@@ -101,7 +100,6 @@ public class Universe {
     } // increaseTime( double )
 
     // draw the N bodies
-
     /**
      *
      */
@@ -112,17 +110,24 @@ public class Universe {
     } // draw()
 
     // client to simulate a universe
-
-    /** makes the universe change color. Made it black
+    /**
+     * makes the universe change color. Made it black
      *
      * @param args
      */
     public static void main(String[] args) {
-        Universe newton = new Universe( args[1] );
+        Universe newton = new Universe(args[1]);
         double dt = Double.parseDouble(args[0]);
         while (true) {
             StdDraw.clear(StdDraw.BLACK); //change background coior
             newton.increaseTime(dt);
+            StdDraw.setPenColor(StdDraw.WHITE);
+            StdDraw.setPenRadius(30);
+            StdDraw.textLeft(-newton.radius, -newton.radius, "Hello there!");
+            if (StdDraw.isKeyPressed('p')) {
+                dt = 0;
+                newton.increaseTime(dt);
+            }
             newton.draw();
             StdDraw.show(10);
         } // while
