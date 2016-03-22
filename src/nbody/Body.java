@@ -2,6 +2,7 @@ package nbody;
 
 import edu.princeton.cs.StdDraw;
 import java.awt.Color;
+import java.util.ArrayList;
 
 /******************************************************************************
  *  Compilation:  javac Body.java
@@ -19,6 +20,7 @@ public class Body {
     private final double mass;   // mass
     private final Color color; //try to choose color
     private final double size;
+    private ArrayList tail;
 
     /**
      *
@@ -59,7 +61,7 @@ public class Body {
      */
     public void draw() {
         StdDraw.setPenRadius(size); //changes size
-        StdDraw.setPenColor(color);
+        StdDraw.setPenColor(color); //changes the color
         StdDraw.point(r.cartesian(0), r.cartesian(1));
     } // draw()
     // GIT IS WORKING
