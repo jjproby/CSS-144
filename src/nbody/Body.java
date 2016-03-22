@@ -53,13 +53,6 @@ public class Body {
         if (tail.size() > 50 ) {
             tail.remove(tail.size() - 1);
         }
-        /*for (int i = 0; i < tail.size() - 1; i++) {
-            double[] extra = tail.get(i + 1);
-            tail.set(i, extra);
-        }//for loop*/
-
-        /*double[] np = {r.cartesian(0), r.cartesian(1)};
-        tail.set(149, np);*/
     }
 
     public Vector forceFrom(Body b) {
