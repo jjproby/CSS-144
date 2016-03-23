@@ -134,9 +134,12 @@ public class Universe {
             if (StdDraw.hasNextKeyTyped()) {
                 char nextKeyTyped = StdDraw.nextKeyTyped();
                 if (nextKeyTyped == 'p') {
-                    dt = 0;
-                } else if (nextKeyTyped == 'r') {
-                    dt = 1;
+                    if (dt == 0) {
+                        dt = Double.parseDouble(args[0]);
+                    }
+                    else {
+                        dt = 0;
+                    }
                 }
             }
         } // while
