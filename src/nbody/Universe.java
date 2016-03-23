@@ -115,14 +115,20 @@ public class Universe {
      *
      * @param args
      */
+    
+    public void textBody() {
+        StdDraw.textLeft(0, 0, "Number of bodies: " + N);
+    }
+    
     public static void main(String[] args) {
         Universe newton = new Universe(args[1]);
         double dt = Double.parseDouble(args[0]);
         while (true) {
             StdDraw.clear(StdDraw.BLACK); //change background coior
+            //StdDraw.picture(0, 0, "hiest.jpg"); //changes background picture
             newton.increaseTime(dt);
-            StdDraw.setPenColor(StdDraw.WHITE);
             StdDraw.setPenRadius(30);
+            StdDraw.setPenColor(StdDraw.WHITE);
             StdDraw.textLeft(-newton.radius, -newton.radius, "Hello there!");
             if (StdDraw.isKeyPressed('p')) {
                 dt = 0;
