@@ -46,7 +46,7 @@ public class Universe {
 
         // the set scale for drawing on screen
         radius = inputStream.readDouble();
-        StdDraw.setCanvasSize(2000, 1900);
+        StdDraw.setCanvasSize(2000, 1587);
         StdDraw.setXscale(-radius, +radius);
         StdDraw.setYscale(-radius, +radius);
 
@@ -125,7 +125,7 @@ public class Universe {
         double dt = Double.parseDouble(args[0]);
         while (true) {
             StdDraw.clear(StdDraw.BLACK); //change background coior
-            //StdDraw.picture(0, 0, "hiest.jpg"); //changes background picture
+            StdDraw.picture(0, 0, "trinity.jpg"); //changes background picture
             newton.increaseTime(dt);
             StdDraw.setPenRadius(30);
             StdDraw.setPenColor(StdDraw.WHITE);
