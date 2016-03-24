@@ -31,9 +31,9 @@ public class Universe {
 
     // read universe from file
     /**
-     * Where you can get the inputs of the bodies
+     * Creates and simulates the universe
      *
-     * @param fileName
+     * @param fileName Where to get the values for the bodies
      */
     public Universe(String fileName) {
 
@@ -74,7 +74,7 @@ public class Universe {
     // increment time by dt units, assume forces are constant in given interval
     /**
      *
-     * @param dt
+     * @param dt The force of TIME AND SPACE
      */
     public void increaseTime(double dt) {
 
@@ -111,7 +111,7 @@ public class Universe {
 
     // client to simulate a universe
     /**
-     * makes the universe change color. Made it black
+     * Does nothing yet. Supposed to put text in though.
      *
      */
     public void textBody() {
@@ -120,7 +120,7 @@ public class Universe {
 
     /**
      *
-     * @param args
+     * @param args does something
      */
     public static void main(String[] args) {
         Universe newton = new Universe(args[1]);
