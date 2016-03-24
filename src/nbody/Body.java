@@ -44,6 +44,11 @@ public class Body {
 
     } // Body( Vector, Vector, double )
 
+    /**
+     *
+     * @param f The vector
+     * @param dt The force of TIME AND SPACE
+     */
     public void move(Vector f, double dt) {
         Vector a = f.times(1 / mass);
         v = v.plus(a.times(dt));
@@ -51,6 +56,10 @@ public class Body {
         this.update(r);
     } // move( Vector, double )
 
+    /**
+     *
+     * @param r A vector
+     */
     public void update(Vector r) {
         double[] position = {r.cartesian(0), r.cartesian(1)};
         tail.add(0, position);
@@ -59,6 +68,11 @@ public class Body {
         }
     }
 
+    /**
+     *
+     * @param b The body
+     * @return The direction the body is going next.
+     */
     public Vector forceFrom(Body b) {
         Body a = this;
         double G = 6.67e-11;
@@ -88,6 +102,10 @@ public class Body {
     // GIT IS WORKING
     // this method is only needed if you want to change the size of the bodies
 
+    /**
+     *
+     * @param penRadius changes the size of the bodies.
+     */
     public void draw(double penRadius) {
         StdDraw.setPenRadius(penRadius);
         StdDraw.point(r.cartesian(0), r.cartesian(1));
