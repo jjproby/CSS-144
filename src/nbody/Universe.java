@@ -131,20 +131,35 @@ public class Universe {
             newton.increaseTime(dt);
             StdDraw.setPenRadius(10);
             StdDraw.setPenColor(StdDraw.WHITE);
-            StdDraw.textLeft(-newton.radius, -newton.radius, "Hello there!");
+            StdDraw.textLeft(-newton.radius, -newton.radius, "Speed of Universe: " + dt);
             newton.draw();
             StdDraw.show(10);
             if (StdDraw.hasNextKeyTyped()) {
                 char nextKeyTyped = StdDraw.nextKeyTyped();
-                if (nextKeyTyped == 'p') {
-                    if (dt == 0) {
-                        dt = Double.parseDouble(args[0]);
-                    }
-                    else {
-                        dt = 0;
-                    }
-                }
-            }
+                switch (nextKeyTyped) {
+                    case 'p':
+                        if (dt == 0) {
+                            dt = 20000; //return to normal
+                        }//if
+                        else {
+                            dt = 0; //pause
+                        }//else
+                        break;
+                    case 'r':
+                        dt = dt*-1; //reverse time
+                        break;
+                    case '+':
+                        dt += 20000; //increase speed
+                        break;
+                    case '-':
+                        dt -= 20000; //decrease speed
+                        break;
+                    case '/':
+                        dt = dt/2; //halve speed
+                    default:
+                        break;
+                }//switch
+            }//if
         } // while
     } // main( String [] )
 } // Universe
