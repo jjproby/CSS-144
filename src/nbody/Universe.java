@@ -113,12 +113,15 @@ public class Universe {
     /**
      * makes the universe change color. Made it black
      *
-     * @param args
      */
     public void textBody() {
         StdDraw.textLeft(0, 0, "Number of bodies: " + N);
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Universe newton = new Universe(args[1]);
         double dt = Double.parseDouble(args[0]);
@@ -126,7 +129,7 @@ public class Universe {
             StdDraw.clear(StdDraw.BLACK); //change background coior
             StdDraw.picture(0, 0, "trinity.jpg"); //changes background picture
             newton.increaseTime(dt);
-            StdDraw.setPenRadius(30);
+            StdDraw.setPenRadius(10);
             StdDraw.setPenColor(StdDraw.WHITE);
             StdDraw.textLeft(-newton.radius, -newton.radius, "Hello there!");
             newton.draw();
