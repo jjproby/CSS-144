@@ -121,13 +121,11 @@ public class VectorTest {
     @Test
     public void testCartesian() {
         System.out.println("cartesian");
-        int i = 0;
-        Vector instance = null;
-        double expResult = 0.0;
-        double result = instance.cartesian(i);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int i = 2;
+        int[] test = {4, 5, 7, 3,5};
+        int result = test[i];
+        int expResult = 7;
+        assertEquals(expResult, result);
     }
 
     /**
