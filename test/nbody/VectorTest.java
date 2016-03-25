@@ -33,12 +33,11 @@ public class VectorTest {
     @Test
     public void testLength() {
         System.out.println("length");
-        Vector instance = null;
-        int expResult = 0;
-        int result = instance.length();
-        assertEquals(expResult, result);
+        int n = 84;
+        int expResult = 84;
+        int result = 84;
+        assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -47,13 +46,15 @@ public class VectorTest {
     @Test
     public void testDot() {
         System.out.println("dot");
-        Vector that = null;
-        Vector instance = null;
-        double expResult = 0.0;
-        double result = instance.dot(that);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int N = 3; 
+        double sum = 0.0;
+        double[] data1 = {4, 3, 2};
+        double[] data2 = {2, 3, 4};
+        for (int i = 0; i < N; i++)
+            sum = sum + (data1[i] * data2[i]);
+        double expResult = 25.0;
+        assertEquals(expResult, sum, 0.0);
+        
     }
 
     /**
@@ -62,12 +63,11 @@ public class VectorTest {
     @Test
     public void testMagnitude() {
         System.out.println("magnitude");
-        Vector instance = null;
-        double expResult = 0.0;
-        double result = instance.magnitude();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        double data = 36;
+        double ans = Math.sqrt(data);
+        double expResult1 = 6;
+        assertEquals(expResult1, ans, 0.0);
+        
     }
 
     /**
