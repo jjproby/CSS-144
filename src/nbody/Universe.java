@@ -110,17 +110,10 @@ public class Universe {
     } // draw()
 
     // client to simulate a universe
-    /**
-     * Does nothing yet. Supposed to put text in though.
-     *
-     */
-    public void textBody() {
-        StdDraw.textLeft(0, 0, "Number of bodies: " + N);
-    }
 
     /**
      *
-     * @param args does something
+     * @param args holds two values, the default time, and the text file the universe generates from.
      */
     public static void main(String[] args) {
         Universe newton = new Universe(args[1]);
