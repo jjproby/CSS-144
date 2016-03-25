@@ -58,29 +58,9 @@ public class BodyTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of draw method, of class Body.
-     */
-    @Test
-    public void testDraw_0args() {
-        System.out.println("draw");
-        Body instance = null;
-        instance.draw();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of draw method, of class Body.
-     */
-    @Test
-    public void testDraw_double() {
-        System.out.println("draw");
-        double penRadius = 0.0;
-        Body instance = null;
-        instance.draw(penRadius);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+
     }
     
-}
+
