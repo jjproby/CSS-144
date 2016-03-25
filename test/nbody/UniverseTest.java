@@ -27,42 +27,8 @@ public class UniverseTest {
     public static void tearDownClass() {
     }
 
-    /**
-     * Test of increaseTime method, of class Universe.
-     */
-    @Test
-    public void testIncreaseTime() {
-        System.out.println("increaseTime");
-        double dt = 0.0;
-        Universe instance = null;
-        instance.increaseTime(dt);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of draw method, of class Universe.
-     */
-    @Test
-    public void testDraw() {
-        System.out.println("draw");
-        Universe instance = null;
-        instance.draw();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of textBody method, of class Universe.
-     */
-    @Test
-    public void testTextBody() {
-        System.out.println("textBody");
-        Universe instance = null;
-        instance.textBody();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of main method, of class Universe.
