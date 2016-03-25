@@ -34,7 +34,7 @@ public class Vector {
 
     /**
      *
-     * @param N
+     * @param N the length of the vector
      */
     public Vector(int N) {
         this.N = N;
@@ -45,7 +45,7 @@ public class Vector {
 
     /**
      *
-     * @param data
+     * @param data filled with the vectors components
      */
     public Vector(double[] data) {
         N = data.length;
@@ -76,7 +76,7 @@ public class Vector {
 
     /**
      *
-     * @return
+     * @return the length of the vector
      */
     public int length() {
         return N;
@@ -86,8 +86,8 @@ public class Vector {
 
     /**
      *
-     * @param that
-     * @return
+     * @param that a different vector
+     * @return the sum of both of the vectors
      */
     public double dot(Vector that) {
         if (this.N != that.N) {
@@ -104,7 +104,7 @@ public class Vector {
 
     /**
      *
-     * @return
+     * @return returns the square root of the dots
      */
     public double magnitude() {
         return Math.sqrt(this.dot(this));
@@ -114,7 +114,7 @@ public class Vector {
 
     /**
      *
-     * @param that
+     * @param that another vector
      * @return
      */
     public double distanceTo(Vector that) {
@@ -148,8 +148,8 @@ public class Vector {
 
     /**
      *
-     * @param that
-     * @return
+     * @param that another vector
+     * @return a new vector
      */
     public Vector minus(Vector that) {
         if (this.N != that.N) {
@@ -166,8 +166,8 @@ public class Vector {
 
     /**
      *
-     * @param i
-     * @return
+     * @param i index on where to grab from the data array
+     * @return a value from the data array
      */
     public double cartesian(int i) {
         return data[i];
