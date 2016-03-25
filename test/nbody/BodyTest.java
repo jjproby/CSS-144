@@ -41,18 +41,7 @@ public class BodyTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of update method, of class Body.
-     */
-    @Test
-    public void testUpdate() {
-        System.out.println("update");
-        Vector r = null;
-        Body instance = null;
-        instance.update(r);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+
 
     /**
      * Test of forceFrom method, of class Body.
